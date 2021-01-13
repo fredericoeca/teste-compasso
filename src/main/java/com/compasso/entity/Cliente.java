@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 @Entity
 public class Cliente {
 
@@ -25,7 +23,6 @@ public class Cliente {
 	
 	private Integer idade;
 	
-	@JsonManagedReference
 	@ManyToOne
 	@JoinColumn(name = "cidade_id")
 	private Cidade cidade;
